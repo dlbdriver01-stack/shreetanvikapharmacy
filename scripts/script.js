@@ -666,14 +666,47 @@ function loadCompoundData() {
 // Render compounds to the grid
 function renderCompounds(compounds) {
   const grid = document.getElementById('compoundsGrid');
+  const discoverBtn = document.getElementById('discoverMoreBtn');
+
   if (!grid) return;
 
   grid.innerHTML = '';
 
-  compounds.forEach(compound => {
+  compounds.forEach((compound, index) => {
     const compoundCard = createCompoundCard(compound);
+
+    // Logic for mobile limit (Show only first 5 initially)
+    if (index >= 5) {
+      // Add classes that hide on mobile (hidden) but show on desktop (md:block)
+      // Also add a marker class for the JS toggle
+      compoundCard.classList.add('hidden', 'md:block', 'mobile-hidden-item');
+    }
+
     grid.appendChild(compoundCard);
   });
+
+  // Manage Discover Button Visibility
+  if (discoverBtn) {
+    if (compounds.length > 5) {
+      discoverBtn.classList.remove('hidden');
+    } else {
+      discoverBtn.classList.add('hidden');
+    }
+  }
+}
+
+// Global function to unhide items on mobile
+window.showAllCompoundsMobile = function () {
+  document.querySelectorAll('.mobile-hidden-item').forEach(el => {
+    el.classList.remove('hidden');
+    // We do NOT add animation here as removing 'display: none' is instant, 
+    // but we could add a fade-in class if desired.
+    el.classList.add('fade-in-up');
+  });
+
+  // Hide the button after expanding
+  const btn = document.getElementById('discoverMoreBtn');
+  if (btn) btn.classList.add('hidden');
 }
 
 // Create compound card element matching the new UI
