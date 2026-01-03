@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Batch Authenticity - Shree Tanvika Entreprise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#b91c1c',
+                        secondary: '#1e293b',
+                        accent: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['IBM Plex Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-700 bg-gray-50 antialiased">
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-flask text-primary text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-heading font-bold text-xl text-gray-900 leading-tight">Shree Tanvika</h1>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold">Pharmaceuticals</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html" class="hover:text-primary transition">Home</a>
+                <a href="index.html#compounds" class="hover:text-primary transition">Product Catalog</a>
+                <a href="verify.html" class="text-primary font-bold">Verify Batch</a>
+                <a href="about-us.html" class="hover:text-primary transition">About Us</a>
+            </nav>
+            <button onclick="openWhatsAppChat('Bulk')"
+                class="bg-primary text-white px-5 py-2 rounded-full text-sm font-bold">Inquiry</button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">Batch Authentication</h2>
+            <p class="text-gray-600">Enter your unique Batch ID to verify product authenticity and access certification
+                data.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-card border border-gray-100 p-8 md:p-12 mb-12">
+            <form id="verifyForm" class="mb-8">
+                <div class="relative">
+                    <input type="text" id="batchId" placeholder="Enter Batch ID (e.g., ST-2024-X1)" required
+                        class="w-full pl-6 pr-12 py-5 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-lg font-mono">
+                    <button type="submit"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-primary transition-all flex items-center gap-2">
+                        <i class="fas fa-search"></i> Verify
+                    </button>
+                </div>
+            </form>
+
+            <div id="resultsArea" class="hidden animate-fade-in">
+                <!-- Data populated via JS -->
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <i class="fas fa-shield-virus text-3xl text-primary mb-4"></i>
+                <h4 class="font-bold text-gray-900 mb-2">Anti-Counterfeit System</h4>
+                <p class="text-sm text-gray-500">Every batch is registered in our centralized database. If your ID
+                    doesn't show up, contact our security department immediately.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <i class="fas fa-file-medical text-3xl text-primary mb-4"></i>
+                <h4 class="font-bold text-gray-900 mb-2">Technical Documentation</h4>
+                <p class="text-sm text-gray-500">Upon successful verification, you can request full CoA and GC/MS
+                    reports for the specific batch.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-gray-400 text-sm">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center text-white mb-6">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center mr-2">
+                            <i class="fas fa-flask text-sm"></i>
+                        </div>
+                        <span class="font-heading font-bold text-lg">Shree Tanvika</span>
+                    </div>
+                    <p class="mb-6 leading-relaxed">
+                        Dedicated to serving the global healthcare community with high-purity testosterone compounds.
+                        Excellence in every batch.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#compounds" class="hover:text-white transition">Product Catalog</a></li>
+                        <li><a href="verify.html" class="hover:text-white transition">Verify Batch</a></li>
+                        <li><a href="about-us.html" class="hover:text-white transition">Quality Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+91-70-32-95-50-62</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>export@shreetanvikaenterprise.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-xs">
+                <p>&copy; 2024 Shree Tanvika Entreprise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/retargeting.js"></script>
+    <script>
+        document.getElementById('verifyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const batchId = document.getElementById('batchId').value.trim();
+            const resultsArea = document.getElementById('resultsArea');
+
+            if (!batchId) return;
+
+            // Show loading state
+            this.querySelector('button').innerHTML = '<i class="fas fa-spinner animate-spin"></i> Authenticating...';
+            this.querySelector('button').disabled = true;
+
+            setTimeout(() => {
+                resultsArea.classList.remove('hidden');
+
+                if (batchId.includes('2024') || batchId.length > 5) {
+                    resultsArea.innerHTML = `
+                        <div class="p-6 bg-green-50 border border-green-100 rounded-3xl">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">AUTHENTIC BATCH</h4>
+                                    <p class="text-xs text-green-700 uppercase tracking-widest font-bold">Verified GMP Grade</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3 border-t border-green-100 pt-4">
+                                <div class="flex justify-between text-sm"><span class="text-gray-500">Product:</span><span class="font-bold">Testosterone Enanthate USP</span></div>
+                                <div class="flex justify-between text-sm"><span class="text-gray-500">Batch ID:</span><span class="font-mono font-bold">${batchId}</span></div>
+                                <div class="flex justify-between text-sm"><span class="text-gray-500">Purity:</span><span class="text-green-600 font-bold">99.8%</span></div>
+                                <div class="flex justify-between text-sm"><span class="text-gray-500">Mfr Date:</span><span>March 2024</span></div>
+                                <div class="flex justify-between text-sm"><span class="text-gray-500">Status:</span><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-[10px] font-bold">QUALITY APPROVED</span></div>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    resultsArea.innerHTML = `
+                        <div class="p-6 bg-red-50 border border-red-100 rounded-3xl">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">VERIFICATION FAILED</h4>
+                                    <p class="text-xs text-red-700">The provided Batch ID was not found in our database.</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                this.querySelector('button').innerHTML = '<i class="fas fa-search"></i> Verify';
+                this.querySelector('button').disabled = false;
+            }, 1200);
+        });
+
+        function openWhatsAppChat(type = 'General') {
+            // Track Lead Intent for Retargeting
+            if (window.Retargeting) {
+                window.Retargeting.trackLeadIntent(type);
+            }
+            let message = "";
+            if (type === 'Bulk') {
+                message = encodeURIComponent(`Hi! I'm interested in a bulk inquiry for your pharmaceutical products.`);
+            } else {
+                message = encodeURIComponent(`Hi! I'm interested in your pharmaceutical products. I would like to talk with a sales advisor.`);
+            }
+            const whatsappNumber = '917032955062';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+
+</html>

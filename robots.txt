@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://shreetanvikaenterprise.com/sitemap.xml
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /script.js
+Disallow: /product-script.js
+
+# Allow important pages
+Allow: /index.html
+Allow: /product.html
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Allow: /shipping-policy.html
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

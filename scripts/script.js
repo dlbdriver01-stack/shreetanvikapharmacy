@@ -1,0 +1,837 @@
+// Compound data injected from data pipeline
+const embeddedCompoundData = [
+  {
+    "id": "testosterone-cypionate",
+    "name": "Testosterone Cypionate",
+    "category": "testosterone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://eugiaus.com/wp-content/uploads/Testosterone-Cypionate-200mg-1mL-web.jpg",
+      "https://www.mcguff.com/content/images/thumbs/0018140_testosterone-cypionate-injection-200-mgml-multiple-dose-vial-10-ml-each.jpeg",
+      "https://m.media-amazon.com/images/I/41gVpMM7GDL.jpg",
+      "https://eugiaus.com/wp-content/uploads/Testosterone-Cypionate-Injection-group-web.jpg"
+    ],
+    "mainImage": "https://eugiaus.com/wp-content/uploads/Testosterone-Cypionate-200mg-1mL-web.jpg",
+    "description": "Pharmaceutical Grade Testosterone Cypionate. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      130,
+      380,
+      680
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-phenylpropionate",
+    "name": "Testosterone Phenylpropionate",
+    "category": "testosterone",
+    "esterType": "short-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/64/Sustanon.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sustanon.JPG/1200px-Sustanon.JPG"
+    ],
+    "mainImage": "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+    "description": "Pharmaceutical Grade Testosterone Phenylpropionate. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      130,
+      370,
+      650
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-propionate",
+    "name": "Testosterone Propionate",
+    "category": "testosterone",
+    "esterType": "short-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.alpha-pharma.com/images/testorapid_new_big.jpg",
+      "https://clearwateraesthetics.com/wp-content/uploads/2023/08/Image14.png",
+      "https://montagelabs.com/product-images/Testosterone-Propionate-Inject-1717993349.jpg",
+      "https://5.imimg.com/data5/SELLER/Default/2024/3/397044232/RA/EB/FF/198019903/test-propionate-100mg-injection.png"
+    ],
+    "mainImage": "https://www.alpha-pharma.com/images/testorapid_new_big.jpg",
+    "description": "Pharmaceutical Grade Testosterone Propionate. High purity formulation suitable for professional use.",
+    "price": [
+      30,
+      70,
+      120,
+      350,
+      600
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-decanoate",
+    "name": "Testosterone Decanoate",
+    "category": "testosterone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sustanon.JPG/1200px-Sustanon.JPG"
+    ],
+    "mainImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sustanon.JPG/1200px-Sustanon.JPG",
+    "description": "Pharmaceutical Grade Testosterone Decanoate. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      130,
+      370,
+      650
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "trenbolone-acetate",
+    "name": "Trenbolone Acetate",
+    "category": "trenbolone",
+    "esterType": "short-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/8906357/b/1/tren-bolone-acetate-injection-ironhorse-pharma.jpg",
+      "https://www.shutterstock.com/image-illustration/testosterone-trenbolone-nandrolone-steroid-vials-260nw-2479465833.jpg",
+      "https://cpimg.tistatic.com/10300990/b/4/Trenabol-Trenbolone-Acetate-Injection-10-Ampoules-Of-1-M-Treatment-Muscle-Building.jpg",
+      "https://cpimg.tistatic.com/02911601/b/4/Trenbolone-Acetate-Tren-75-75mg-ml-10ml-vial-.jpg"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/8906357/b/1/tren-bolone-acetate-injection-ironhorse-pharma.jpg",
+    "description": "Pharmaceutical Grade Trenbolone Acetate. High purity formulation suitable for professional use.",
+    "price": [
+      110,
+      300,
+      550,
+      2050,
+      4000
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "sustanon-250-testosterone-blend",
+    "name": "Sustanon 250 Testosterone Blend",
+    "category": "testosterone",
+    "esterType": "blend",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+      "https://laanabolic.com/images/productPic/productB-inject-Sustanon250ml10ml.jpg",
+      "https://medecify.com/storage/2025/05/IMG-152-768x1024.jpeg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sustanon.JPG/1200px-Sustanon.JPG"
+    ],
+    "mainImage": "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+    "description": "Pharmaceutical Grade Sustanon 250 Testosterone Blend. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      140,
+      450,
+      750
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "nandrolone-decanoate",
+    "name": "Nandrolone Decanoate",
+    "category": "nandrolone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/2025-empower-pharmacy-nandrolone-decanoate-injection-200mgml-5ml-NS-294x490-1.jpg",
+      "https://www.empowerpharmacy.com/wp-content/uploads/2024/02/empower-pharmacy-nandrolone-decanoate-injection-200mgml-5ml-294x490-1.jpg",
+      "https://recovered.sfo3.cdn.digitaloceanspaces.com/media/16588/conversions/Nandrolone-Decanoate-guide-detail.jpg?v=1747295181",
+      "https://www.shutterstock.com/shutterstock/photos/1088902040/display_1500/stock-photo--d-render-of-nandrolone-decanoate-vial-over-white-background-anabolic-steroids-concept-1088902040.jpg"
+    ],
+    "mainImage": "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/2025-empower-pharmacy-nandrolone-decanoate-injection-200mgml-5ml-NS-294x490-1.jpg",
+    "description": "Pharmaceutical Grade Nandrolone Decanoate. High purity formulation suitable for professional use.",
+    "price": [
+      50,
+      130,
+      230,
+      950,
+      1750
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-enanthate",
+    "name": "Testosterone Enanthate",
+    "category": "testosterone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.merlin-medical.co.uk/medias/1200Wx1200H-J178-Primary?context=bWFzdGVyfGltYWdlc3w0MzAzM3xpbWFnZS9qcGVnfGFHSmtMMmhrTVM4eE1ERTVORE0zTmpjeU1EUXhOQzh4TWpBd1YzZ3hNakF3U0Y5S01UYzRYMUJ5YVcxaGNua3xmNWFkN2JiN2JkZTRmOWQ4MmQ5ZTVhZTIxYmFlOGY0NDI0NTU2ZTRkMGMxMDUyZTRhNjRlODYxZjIwMzc0MDgy"
+    ],
+    "mainImage": "https://www.merlin-medical.co.uk/medias/1200Wx1200H-J178-Primary?context=bWFzdGVyfGltYWdlc3w0MzAzM3xpbWFnZS9qcGVnfGFHSmtMMmhrTVM4eE1ERTVORE0zTmpjeU1EUXhOQzh4TWpBd1YzZ3hNakF3U0Y5S01UYzRYMUJ5YVcxaGNua3xmNWFkN2JiN2JkZTRmOWQ4MmQ5ZTVhZTIxYmFlOGY0NDI0NTU2ZTRkMGMxMDUyZTRhNjRlODYxZjIwMzc0MDgy",
+    "description": "Pharmaceutical Grade Testosterone Enanthate. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      130,
+      370,
+      650
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-propionate-100mg-ml",
+    "name": "Testosterone Propionate 100mg/ml",
+    "category": "testosterone",
+    "esterType": "short-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.alpha-pharma.com/images/testorapid_new_big.jpg",
+      "https://clearwateraesthetics.com/wp-content/uploads/2023/08/Image14.png",
+      "https://montagelabs.com/product-images/Testosterone-Propionate-Inject-1717993349.jpg",
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/2025-empower-pharmacy-testosterone-cypionate-testosterone-propionate-injection-160-40mgml-5ml-294x490-1.jpg"
+    ],
+    "mainImage": "https://www.alpha-pharma.com/images/testorapid_new_big.jpg",
+    "description": "Pharmaceutical Grade Testosterone Propionate 100mg/ml. High purity formulation suitable for professional use.",
+    "price": [
+      30,
+      70,
+      120,
+      350,
+      600
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "drostanolone-masteron",
+    "name": "Drostanolone Masteron",
+    "category": "drostanolone",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/06644610/b/4/Drostanolonene-Propionate-Injection.jpg",
+      "https://cpimg.tistatic.com/5988690/b/1/100mg-masteron-drostanolone-propionate-injection.jpg",
+      "https://5.imimg.com/data5/SELLER/Default/2025/6/515920128/CR/MR/DH/205816124/masteron-drostanolone-propionate-100mg-10-am-500x500.jpeg",
+      "https://cpimg.tistatic.com/9353216/b/4/100-mg-masteron-drostanolone-propionate-injection.jpg"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/06644610/b/4/Drostanolonene-Propionate-Injection.jpg",
+    "description": "Pharmaceutical Grade Drostanolone Masteron. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      100,
+      170,
+      650,
+      1250
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "boldenone-equipoise-veterinary",
+    "name": "Boldenone Equipoise Veterinary",
+    "category": "boldenone",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/05988689/b/4/250MG-Boldenone-Undecylenate-Injection.jpg",
+      "https://cpimg.tistatic.com/10699709/b/4/200mg-Equipoise-Undecylenate-Injection..jpg",
+      "https://gamecock-apparel-and-supplies.com/wp-content/uploads/2025/04/Equipose-byPfizer-50-ml.jpg",
+      "https://cpimg.tistatic.com/10699713/b/4/400mg-Equipoise-Undecylenate-Injection..jpg"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/05988689/b/4/250MG-Boldenone-Undecylenate-Injection.jpg",
+    "description": "Pharmaceutical Grade Boldenone Equipoise Veterinary. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      100,
+      160,
+      600,
+      1050
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "stanozolol-winstrol-or",
+    "name": "Stanozolol Winstrol Or",
+    "category": "oral",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/7118546/b/5/stanozolol-injection.jpg",
+      "https://www.biosynth.com/storage/BottleImages/FS/15/BIOSYNTH_FS156771.png",
+      "https://www.cfspharmacy.pharmacy/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/s/t/stanozolol-capsules.jpg"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/7118546/b/5/stanozolol-injection.jpg",
+    "description": "Pharmaceutical Grade Stanozolol Winstrol Or. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      110,
+      230,
+      800,
+      1500
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "mk-2866-ostarine-sarm-research-chemical",
+    "name": "Mk-2866 Ostarine Sarm Research Chemical",
+    "category": "other",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://receptorchem.co.uk/javascripts4/2015/11/OSTA-B.jpg",
+      "https://umbrellalabs.is/wp-content/uploads/mk-2866-ostarine-25mg-sarm-research-gels-pouch.jpg",
+      "https://ars.els-cdn.com/content/image/1-s2.0-S2352007818303275-gr2.jpg",
+      "https://sfcc.predatornutrition.com/on/demandware.static/-/Sites-PredatorPWA-Library/default/dw3be22ef8/ART_mk2866_side.jpg"
+    ],
+    "mainImage": "https://receptorchem.co.uk/javascripts4/2015/11/OSTA-B.jpg",
+    "description": "Pharmaceutical Grade Mk-2866 Ostarine Sarm Research Chemical. High purity formulation suitable for professional use.",
+    "price": [
+      70,
+      170,
+      300,
+      1200,
+      2150
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "oxandrolone-anavar",
+    "name": "Oxandrolone Anavar",
+    "category": "oral",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://img1.exportersindia.com/product_images/bc-full/2024/2/3684490/pro-anavar-1708416814_7301993_2026773.jpg",
+      "https://www.novarecoverycenter.com/wp-content/uploads/2025/06/ChatGPT-Image-Jun-10-2025-at-07_33_16-PM.png",
+      "https://pbs.twimg.com/media/ETRR0xGWsAEmznC.jpg"
+    ],
+    "mainImage": "https://img1.exportersindia.com/product_images/bc-full/2024/2/3684490/pro-anavar-1708416814_7301993_2026773.jpg",
+    "description": "Pharmaceutical Grade Oxandrolone Anavar. High purity formulation suitable for professional use.",
+    "price": [
+      100,
+      250,
+      500,
+      1900,
+      3600
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "boldenone-undecylenate-equipoise",
+    "name": "Boldenone Undecylenate Equipoise",
+    "category": "boldenone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/05988689/b/4/250MG-Boldenone-Undecylenate-Injection.jpg",
+      "https://gamecock-apparel-and-supplies.com/wp-content/uploads/2025/04/Equipose-byPfizer-50-ml.jpg",
+      "https://cpimg.tistatic.com/10699709/b/4/200mg-Equipoise-Undecylenate-Injection..jpg",
+      "https://cpimg.tistatic.com/10699713/b/4/400mg-Equipoise-Undecylenate-Injection..jpg"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/05988689/b/4/250MG-Boldenone-Undecylenate-Injection.jpg",
+    "description": "Pharmaceutical Grade Boldenone Undecylenate Equipoise. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      100,
+      160,
+      600,
+      1050
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "sustanon-250",
+    "name": "Sustanon 250",
+    "category": "other",
+    "esterType": "blend",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+      "https://www.vinmec.com/static/uploads/20220630_090848_664103_Sustanon_250_max_1800x1800_jpg_a9dbc10e2e.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Sustanon.JPG/1200px-Sustanon.JPG"
+    ],
+    "mainImage": "https://www.pharmacyplanet.com/media/catalog/product/cache/d3fca980f4a76b932c990647f107d37f/s/u/sustanon_250_mg.jpg",
+    "description": "Pharmaceutical Grade Sustanon 250. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      140,
+      450,
+      750
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "testosterone-enanthate-250mg-ml",
+    "name": "Testosterone Enanthate 250mg/ml",
+    "category": "testosterone",
+    "esterType": "long-ester",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.henryschein.com/Products/1437316_US_Front_01_600x600.jpg",
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/2025-empower-pharmacy-testosterone-enanthate-injection-200mgml-5ml-294x490-1.jpg",
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/empower-pharmacy-commercial-testosterone-enanthate-injection-200mgml-294x490-1.jpg"
+    ],
+    "mainImage": "https://www.henryschein.com/Products/1437316_US_Front_01_600x600.jpg",
+    "description": "Pharmaceutical Grade Testosterone Enanthate 250mg/ml. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      80,
+      130,
+      370,
+      650
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "dapoxetine-priligy",
+    "name": "Dapoxetine Priligy",
+    "category": "other",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.doctorfox.co.uk/imgs-products/sd/16x9/priligy.jpg",
+      "https://www.privatedoc.com/img/0037_priligy.jpg",
+      "https://www.somersetmedicalcenter.com/wp-content/uploads/2025/04/dapoxetine-priligy.jpg",
+      "https://api.evaro.com/wp-content/uploads/2024/08/Priligy-INSIDE.png"
+    ],
+    "mainImage": "https://www.doctorfox.co.uk/imgs-products/sd/16x9/priligy.jpg",
+    "description": "Pharmaceutical Grade Dapoxetine Priligy. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      130,
+      250,
+      850,
+      1650
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "tamoxifen-nolvadex",
+    "name": "Tamoxifen Nolvadex",
+    "category": "other",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/empower-pharmacy-commercial-tamoxifen-citrate-tablets-10mg-new-294x490-1.jpg",
+      "https://lotusinternational.com/wp-content/uploads/2020/11/nolvadex.jpg"
+    ],
+    "mainImage": "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/empower-pharmacy-commercial-tamoxifen-citrate-tablets-10mg-new-294x490-1.jpg",
+    "description": "Pharmaceutical Grade Tamoxifen Nolvadex. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      90,
+      140,
+      600,
+      1050
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "winstrol-stanozolol",
+    "name": "Winstrol Stanozolol",
+    "category": "oral",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://cpimg.tistatic.com/09353593/b/4/Winstrol-Stanozolol-Tablets-10-Mg.jpg",
+      "https://www.cfspharmacy.pharmacy/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/s/t/stanozolol-capsules.jpg",
+      "https://cpimg.tistatic.com/11625637/b/4/Stanozolol-Tablets-10-Mg..webp"
+    ],
+    "mainImage": "https://cpimg.tistatic.com/09353593/b/4/Winstrol-Stanozolol-Tablets-10-Mg.jpg",
+    "description": "Pharmaceutical Grade Winstrol Stanozolol. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      110,
+      230,
+      800,
+      1500
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "dianabol-methandrostenolone",
+    "name": "Dianabol Methandrostenolone",
+    "category": "oral",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://5.imimg.com/data5/GLADMIN/Default/2022/9/OT/HG/XU/28031/methandienone-tablets-500x500.jpg",
+      "https://c8.alamy.com/zooms/9/5f3f89b8cb364cdd92e5c89d07a76446/drx15j.jpg",
+      "https://tiimg.tistatic.com/fp/1/008/534/dbol-10mg-563.jpg",
+      "https://cpimg.tistatic.com/08662062/b/4/Dianabol-Methandienone-Tablet.jpg"
+    ],
+    "mainImage": "https://5.imimg.com/data5/GLADMIN/Default/2022/9/OT/HG/XU/28031/methandienone-tablets-500x500.jpg",
+    "description": "Pharmaceutical Grade Dianabol Methandrostenolone. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      110,
+      230,
+      800,
+      1500
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "tadalafil-cialis",
+    "name": "Tadalafil Cialis",
+    "category": "other",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://www.peakpharmacy.co.uk/uploads/images/products/large/peakpharmacy-cialis-tablets-branded-tadalafil-1691485875Cialis-Tablets-Branded-Tadalafil-.jpg",
+      "http://egyptiandrugstore.com/image/cache/data/manar5/cialis-500x500.png",
+      "https://www.empowerpharmacy.com/wp-content/uploads/2025/07/empower-pharmacy-commercial-cialis-tadalafil-tablets-5mg-294x490-1.jpg"
+    ],
+    "mainImage": "https://www.peakpharmacy.co.uk/uploads/images/products/large/peakpharmacy-cialis-tablets-branded-tadalafil-1691485875Cialis-Tablets-Branded-Tadalafil-.jpg",
+    "description": "Pharmaceutical Grade Tadalafil Cialis. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      90,
+      140,
+      450,
+      750
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  },
+  {
+    "id": "sildenafil-viagra",
+    "name": "Sildenafil Viagra",
+    "category": "other",
+    "esterType": "other",
+    "halfLife": "Variable",
+    "images": [
+      "https://cdn.theatlantic.com/thumbor/8lOAc4iKlA5mREfzI73Bke7U33w=/137x0:1985x1386/1200x900/media/img/mt/2018/03/AP_120302046624/original.jpg",
+      "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:200,cw:800,ch:800,q:80,w:800/q8f6n3t6VLWcth6MQEyiKJ.jpg",
+      "https://xyonhealth.com/cdn/shop/files/sildenafil.jpg?v=1744414254&width=953"
+    ],
+    "mainImage": "https://cdn.theatlantic.com/thumbor/8lOAc4iKlA5mREfzI73Bke7U33w=/137x0:1985x1386/1200x900/media/img/mt/2018/03/AP_120302046624/original.jpg",
+    "description": "Pharmaceutical Grade Sildenafil Viagra. High purity formulation suitable for professional use.",
+    "price": [
+      40,
+      50,
+      100,
+      250,
+      400
+    ],
+    "inStock": true,
+    "features": [
+      "GMP Certified",
+      "Batch Tested",
+      "High Purity"
+    ]
+  }
+];
+
+// Load and process compound data
+let compoundsData = [];
+let filteredCompounds = [];
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', function () {
+  loadCompoundData();
+  setupEventListeners();
+});
+
+// Load compound data
+function loadCompoundData() {
+  try {
+    showLoading(true);
+
+    // Use injected data directly
+    compoundsData = embeddedCompoundData;
+    filteredCompounds = [...compoundsData];
+
+    if (compoundsData.length === 0) {
+      showError('No compounds found in data');
+    } else {
+      renderCompounds(compoundsData);
+    }
+
+    showLoading(false);
+  } catch (error) {
+    console.error('Error loading compound data:', error);
+    showLoading(false);
+    showError('Failed to load compounds. Please try again later.');
+  }
+}
+
+// Render compounds to the grid
+function renderCompounds(compounds) {
+  const grid = document.getElementById('compoundsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = '';
+
+  compounds.forEach(compound => {
+    const compoundCard = createCompoundCard(compound);
+    grid.appendChild(compoundCard);
+  });
+}
+
+// Create compound card element matching the new UI
+function createCompoundCard(compound) {
+  const card = document.createElement('div');
+  card.className = 'product-card bg-white rounded-2xl border border-gray-100 p-6 relative group overflow-hidden cursor-pointer';
+  card.onclick = () => navigateToCompound(compound.id);
+
+  // Determine badge content and color based on compound attributes
+  let badgeText = 'In Stock';
+  let badgeClass = 'bg-green-100 text-green-700';
+
+  if (compound.name.includes('Enanthate')) {
+    badgeText = 'Bulk Only';
+    badgeClass = 'bg-blue-100 text-blue-700';
+  } else if (compound.name.includes('Propionate')) {
+    badgeText = 'High Demand';
+    badgeClass = 'bg-green-100 text-green-700';
+  } else if (compound.esterType === 'blend' || compound.name.includes('Sustanon')) {
+    badgeText = 'Blend';
+    badgeClass = 'bg-purple-100 text-purple-700';
+  }
+
+  const esterLabel = compound.esterType === 'short-ester' ? 'Short Ester' :
+    compound.esterType === 'long-ester' ? 'Long Ester' :
+      compound.esterType === 'blend' ? 'Multi-Ester' : 'Compound';
+
+  // Ensure price exists
+  const displayPrice = (compound.price && compound.price.length > 2) ? compound.price[2] : (compound.price ? compound.price[0] : 0);
+
+  card.innerHTML = `
+        <div class="absolute top-4 left-4 ${badgeClass} text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">
+            ${badgeText}
+        </div>
+        <div class="h-48 mb-6 flex items-center justify-center bg-gray-50 rounded-xl group-hover:bg-primary/5 transition-colors">
+            <img src="${compound.mainImage}" alt="${compound.name}" class="h-32 object-contain mix-blend-multiply">
+        </div>
+        <div>
+            <div class="text-xs text-gray-400 font-semibold mb-1">${esterLabel}</div>
+            <h4 class="font-bold text-gray-900 text-lg mb-2 leading-tight group-hover:text-primary transition">
+                ${compound.name}
+            </h4>
+            <div class="flex items-center justify-between mt-4">
+                <div>
+                    <span class="block text-xs text-gray-400">Box of 10</span>
+                    <span class="text-lg font-bold text-gray-900">$${displayPrice}.00</span>
+                </div>
+                <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    `;
+
+  return card;
+}
+
+// Navigate to compound detail page
+function navigateToCompound(compoundId) {
+  // Track intent if retargeting is available
+  if (window.Retargeting) {
+    const product = compoundsData.find(p => p.id === compoundId);
+    if (product) window.Retargeting.trackProductView(product);
+  }
+  window.location.href = `product.html?id=${compoundId}`;
+}
+
+// Setup event listeners
+function setupEventListeners() {
+  // Category filter buttons
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      // Remove active class from all buttons
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.classList.remove('active', 'bg-gray-900', 'text-white', 'shadow-lg', 'transform', 'scale-105');
+        b.classList.add('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+      });
+
+      // Add active class to clicked button
+      this.classList.remove('bg-white', 'border', 'border-gray-200', 'text-gray-600');
+      this.classList.add('active', 'bg-gray-900', 'text-white', 'shadow-lg', 'transform', 'scale-105');
+
+      filterCompounds(this.dataset.category);
+    });
+  });
+
+  // Search functionality hook
+  const searchInput = document.getElementById('searchInput'); // If exists
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => searchCompounds(e.target.value));
+  }
+}
+
+// Filter and sort compounds
+function filterCompounds(category) {
+  let filtered = [...compoundsData];
+
+  // Apply category filter
+  if (category !== 'all') {
+    filtered = filtered.filter(compound => compound.esterType === category);
+  }
+
+  filteredCompounds = filtered;
+  renderCompounds(filteredCompounds);
+}
+
+// Show loading state
+function showLoading(show) {
+  const loadingState = document.getElementById('loadingState');
+  const compoundsGrid = document.getElementById('compoundsGrid');
+
+  if (!loadingState || !compoundsGrid) return;
+
+  if (show) {
+    loadingState.classList.remove('hidden');
+    compoundsGrid.classList.add('hidden');
+  } else {
+    loadingState.classList.add('hidden');
+    compoundsGrid.classList.remove('hidden');
+  }
+}
+
+// Show error message
+function showError(message) {
+  const compoundsGrid = document.getElementById('compoundsGrid');
+  if (compoundsGrid) {
+    compoundsGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
+                <i class="fas fa-exclamation-triangle text-medical-red text-4xl mb-4"></i>
+                <p class="text-gray-600 text-lg">${message}</p>
+            </div>
+        `;
+  }
+}
+
+// Search functionality
+function searchCompounds(query) {
+  if (!query) {
+    renderCompounds(compoundsData);
+    return;
+  }
+
+  const filtered = compoundsData.filter(compound =>
+    compound.name.toLowerCase().includes(query.toLowerCase()) ||
+    compound.category.toLowerCase().includes(query.toLowerCase())
+  );
+  renderCompounds(filtered);
+}
+
+// Open WhatsApp chat function (Generic for Home Page)
+function openWhatsAppChat(type = 'General') {
+  let message = "";
+  if (type === 'Bulk') {
+    message = encodeURIComponent(`Hi! I'm interested in a bulk inquiry for your pharmaceutical products.`);
+  } else {
+    message = encodeURIComponent(`Hi! I'm interested in your pharmaceutical products. I would like to talk with a sales advisor.`);
+  }
+  const whatsappNumber = '917032955062';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
+}
