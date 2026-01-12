@@ -185,7 +185,7 @@
                 <div class="hidden lg:flex flex-1 max-w-2xl relative">
                     <input type="text" id="searchInput" placeholder="Search chemical name, CAS number, or compound..."
                         class="w-full pl-6 pr-12 py-3 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-sm search-bar-shadow">
-                    <button id="searchBtn"
+                    <button id="searchBtn" aria-label="Search"
                         class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-red-800 transition shadow-md">
                         <i class="fas fa-search text-sm"></i>
                     </button>
@@ -194,7 +194,7 @@
                 <!-- User Actions -->
                 <div class="flex items-center space-x-4 lg:space-x-8 shrink-0">
                     <!-- Phone CTA -->
-                    <a href="tel:+917032955062"
+                    <a href="tel:+917032955062" aria-label="Call Direct Advisor"
                         class="flex items-center space-x-3 text-gray-700 hover:text-primary transition group">
                         <div
                             class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-primary/10 transition shadow-sm border border-gray-100">
@@ -202,7 +202,7 @@
                         </div>
                         <div class="hidden xl:block">
                             <span
-                                class="block text-[10px] text-gray-500 uppercase font-bold tracking-wider leading-none mb-1">Direct
+                                class="block text-[10px] text-gray-600 uppercase font-bold tracking-wider leading-none mb-1">Direct
                                 Advisor</span>
                             <span class="block text-sm font-bold text-gray-900">+91 70329 55062</span>
                         </div>
@@ -215,7 +215,7 @@
                     </button>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button"
+                    <button id="mobile-menu-button" aria-label="Open Menu"
                         class="md:hidden text-gray-700 hover:text-primary focus:outline-none p-2">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
@@ -441,7 +441,7 @@
                         <div class="bg-gray-200 rounded-2xl overflow-hidden mb-4 relative aspect-[4/5]">
                             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=80"
                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                                alt="Lab Tech" loading="lazy">
+                                alt="Lab Tech" loading="lazy" width="500" height="625">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <span class="absolute bottom-4 left-4 text-white font-medium text-sm">Quality
                                 Assurance</span>
@@ -455,7 +455,7 @@
                         <div class="bg-gray-200 rounded-2xl overflow-hidden mb-4 relative aspect-[4/5]">
                             <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80"
                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                                alt="Doctor" loading="lazy">
+                                alt="Doctor" loading="lazy" width="500" height="625">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <span class="absolute bottom-4 left-4 text-white font-medium text-sm">Clinical Trends</span>
                         </div>
@@ -469,7 +469,7 @@
                         <div class="bg-gray-200 rounded-2xl overflow-hidden mb-4 relative aspect-[4/5]">
                             <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=500&q=80"
                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                                alt="Logistics" loading="lazy">
+                                alt="Logistics" loading="lazy" width="500" height="625">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <span class="absolute bottom-4 left-4 text-white font-medium text-sm">Logistics</span>
                         </div>
@@ -482,7 +482,7 @@
                         <div class="bg-gray-200 rounded-2xl overflow-hidden mb-4 relative aspect-[4/5]">
                             <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=500&q=80"
                                 class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                                alt="Senior Patient" loading="lazy">
+                                alt="Senior Patient" loading="lazy" width="500" height="625">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <span class="absolute bottom-4 left-4 text-white font-medium text-sm">Study Results</span>
                         </div>
@@ -565,7 +565,7 @@
                     <!-- Video 1 -->
                     <div
                         class="group relative rounded-2xl overflow-hidden bg-gray-900 shadow-2xl ring-1 ring-white/10 aspect-video cursor-pointer video-trigger transform transition-all duration-500 hover:shadow-primary/20">
-                        <video
+                        <video preload="none" width="1280" height="720"
                             poster="https://images.unsplash.com/photo-1579165466751-f13226a6d63c?auto=format&fit=crop&w=800&q=80"
                             class="w-full h-full object-cover transition duration-700" playsinline muted>
                             <source src="public/Sterility%20Testing%20performed%20at%20Nelson%20Labs.mp4"
@@ -596,7 +596,7 @@
                     <!-- Video 2 -->
                     <div
                         class="group relative rounded-2xl overflow-hidden bg-gray-900 shadow-2xl ring-1 ring-white/10 aspect-video cursor-pointer video-trigger transform transition-all duration-500 hover:shadow-primary/20">
-                        <video
+                        <video preload="none" width="1280" height="720"
                             poster="https://images.unsplash.com/photo-1615461168409-02bb14757271?auto=format&fit=crop&w=800&q=80"
                             class="w-full h-full object-cover transition duration-700" playsinline muted>
                             <source src="public/automated-packaging-line.mp4" type="video/mp4">
@@ -623,7 +623,7 @@
                     <!-- Video 3 -->
                     <div
                         class="group relative rounded-2xl overflow-hidden bg-gray-900 shadow-2xl ring-1 ring-white/10 aspect-video cursor-pointer video-trigger transform transition-all duration-500 hover:shadow-primary/20">
-                        <video
+                        <video preload="none" width="1280" height="720"
                             poster="https://images.unsplash.com/photo-1631551061730-10659f8ed97d?auto=format&fit=crop&w=800&q=80"
                             class="w-full h-full object-cover transition duration-700" playsinline muted>
                             <source src="public/global-distribution.mp4" type="video/mp4">
