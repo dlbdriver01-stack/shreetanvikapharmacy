@@ -757,19 +757,19 @@ function createCompoundCard(compound) {
             ${badgeText}
         </div>
         <div class="h-48 mb-6 flex items-center justify-center bg-gray-50 rounded-xl group-hover:bg-primary/5 transition-colors">
-            <img src="${compound.mainImage}" alt="${compound.name}" class="h-32 object-contain mix-blend-multiply">
+            <img src="${compound.mainImage}" alt="${compound.name}" class="h-32 object-contain mix-blend-multiply" width="200" height="150">
         </div>
         <div>
-            <div class="text-xs text-gray-400 font-semibold mb-1">${esterLabel}</div>
+            <div class="text-xs text-gray-500 font-bold mb-1 uppercase tracking-wide">${esterLabel}</div>
             <h4 class="font-bold text-gray-900 text-lg mb-2 leading-tight group-hover:text-primary transition">
                 ${compound.name}
             </h4>
             <div class="flex items-center justify-between mt-4">
                 <div>
-                    <span class="block text-xs text-gray-400">Box of 10</span>
+                    <span class="block text-xs text-gray-500 font-medium">Box of 10</span>
                     <span class="text-lg font-bold text-gray-900">$${displayPrice}.00</span>
                 </div>
-                <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition">
+                <button aria-label="View Details" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition">
                     <i class="fas fa-plus"></i>
                 </button>
             </div>
