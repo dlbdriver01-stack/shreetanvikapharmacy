@@ -9,8 +9,6 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 Disallow: /*.json$
-Disallow: /script.js
-Disallow: /product-script.js
 
 # Allow important pages
 Allow: /index.html
