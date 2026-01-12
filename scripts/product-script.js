@@ -647,7 +647,8 @@ function loadProductDetails() {
     const productId = urlParams.get('id');
 
     if (!productId) {
-      showError('Product not found');
+      // SEO FIX: If no product ID, redirect to catalog instead of soft 404
+      window.location.replace("index.html#compounds");
       return;
     }
 
