@@ -672,6 +672,21 @@ function renderCompounds(compounds) {
 
   grid.innerHTML = '';
 
+  if (compounds.length === 0) {
+    grid.innerHTML = `
+          <div class="col-span-full text-center py-12">
+              <div class="bg-gray-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <i class="fas fa-search text-gray-400 text-xl"></i>
+              </div>
+              <h3 class="text-gray-900 font-bold text-lg mb-2">No compounds found</h3>
+              <p class="text-gray-500">Try adjusting your search terms or view our full formulary.</p>
+              <button onclick="renderCompounds(embeddedCompoundData); document.getElementById('searchInput').value=''" class="mt-4 text-primary font-semibold hover:text-red-800 transition">View All Products</button>
+          </div>
+      `;
+    if (discoverBtn) discoverBtn.classList.add('hidden');
+    return;
+  }
+
   compounds.forEach((compound, index) => {
     const compoundCard = createCompoundCard(compound);
 
@@ -794,9 +809,38 @@ function setupEventListeners() {
   });
 
   // Search functionality hook
-  const searchInput = document.getElementById('searchInput'); // If exists
+  // Search functionality hook
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+
   if (searchInput) {
-    searchInput.addEventListener('input', (e) => searchCompounds(e.target.value));
+    // Real-time filtering
+    searchInput.addEventListener('input', (e) => {
+      searchCompounds(e.target.value);
+    });
+
+    // Enter key to scroll to results
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        scrollToCompounds();
+        searchInput.blur();
+      }
+    });
+  }
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      const query = searchInput ? searchInput.value : '';
+      searchCompounds(query);
+      scrollToCompounds();
+    });
+  }
+}
+
+function scrollToCompounds() {
+  const section = document.getElementById('compounds');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
